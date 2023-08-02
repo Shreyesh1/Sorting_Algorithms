@@ -1,0 +1,30 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+void bubble_Sort(int[],int);
+int main(){
+    
+    int arr[]={34,23,56,8,43,54,2,3,4,5,65,12};
+    bubble_Sort(arr,12);
+    for(int i=0;i<12;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+
+void bubble_Sort(int arr[],int n){
+     int flag;
+     for(int round=1;round<=n-1;round++){
+        flag=0;
+        for(int i=0;i<=n-round;i++){
+            if(arr[i]>arr[i+1]){
+                flag=1;
+                swap(arr[i],arr[i+1]);
+            }
+        }
+        if(flag==0){
+            return;
+        }
+     }
+     
+
+}
